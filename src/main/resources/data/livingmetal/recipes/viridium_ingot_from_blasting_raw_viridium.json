@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "viridium_ingot",
+  "ingredient": {
+    "item": "livingmetal:raw_viridium"
+  },
+  "result": "livingmetal:viridium_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}
