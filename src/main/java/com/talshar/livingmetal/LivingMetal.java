@@ -1,5 +1,6 @@
 package com.talshar.livingmetal;
 
+import com.talshar.livingmetal.block.ModBlocks;
 import com.talshar.livingmetal.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -20,7 +21,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("livingmetal")
+@Mod(LivingMetal.MOD_ID)
 public class LivingMetal
 {
     // Directly reference a log4j logger.
@@ -29,6 +30,7 @@ public class LivingMetal
     public LivingMetal() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
         // Register the setup method for modloading
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
