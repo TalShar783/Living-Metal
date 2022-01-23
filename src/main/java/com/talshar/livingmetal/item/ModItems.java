@@ -1,6 +1,7 @@
 package com.talshar.livingmetal.item;
 
 import com.talshar.livingmetal.LivingMetal;
+import com.talshar.livingmetal.item.custom.DustbringerItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,8 +45,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> VIRIDIUM_NUGGET = ITEMS.register("viridium_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
     public static final RegistryObject<Item> RAW_VIRIDIUM = ITEMS.register("raw_viridium",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
+    public static final RegistryObject<Item> DUSTBRINGER = ITEMS.register("dustbringer",
+            () -> new DustbringerItem(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB).durability(64)));
 
 
 
