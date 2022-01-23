@@ -26,6 +26,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> VIRIDIUM_ORE = registerBlock("viridium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.75f,6).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> DUST = registerBlock("dust",
+            () -> new Block(BlockBehaviour.Properties.of(Material.SAND).strength(0.25f,1)));
+    //TODO: Add proper sounds and gravity
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

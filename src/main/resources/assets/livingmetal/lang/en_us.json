@@ -13,6 +13,7 @@
   "item.livingmetal.raw_viridium": "Raw Viridium",
   "block.livingmetal.viridium_block": "Viridium Block",
   "block.livingmetal.viridium_ore": "Viridium Ore",
-  "itemGroup.livingMetalTab": "Living Metal"
+  "itemGroup.livingMetalTab": "Living Metal",
+  "block.livingmetal.dust": "Dust"
 
 }
