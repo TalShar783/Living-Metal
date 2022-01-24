@@ -7,6 +7,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,8 +29,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.75f,6).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DUST = registerBlock("dust",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND).strength(0.25f,1)));
-    //TODO: Add proper sounds and gravity
+            () -> new FallingBlock(BlockBehaviour.Properties.of(Material.SAND).strength(0.25f,1).sound(SoundType.SAND)));
+    //TODO: Add breakage when falling on to them
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
