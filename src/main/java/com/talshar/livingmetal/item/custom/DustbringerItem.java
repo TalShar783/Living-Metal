@@ -6,8 +6,13 @@ import com.talshar.livingmetal.item.ModItems;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
@@ -28,6 +33,35 @@ public class DustbringerItem extends Item {
     public DustbringerItem(Properties pProperties) {
         super(pProperties);
     }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+        if (!pLevel.isClientSide && !pPlayer.isSteppingCarefully()) {
+            if (pUsedHand == InteractionHand.OFF_HAND) {
+                ItemStack mainHandItem = pPlayer.getMainHandItem();
+                if (isDamageable(mainHandItem)) {
+                    setDamage(mainHandItem, (getDamage(mainHandItem) + 50));
+                    int currentDamage = getDamage(mainHandItem);
+                    pPlayer.sendMessage(new TextComponent("Current damage: " + currentDamage),
+                            Util.NIL_UUID);
+                    pPlayer.sendMessage(new TextComponent("Max Damage: " + pPlayer.getMainHandItem().getMaxDamage()),
+                            Util.NIL_UUID);
+                    pPlayer.sendMessage(new TextComponent("Item in main hand is: " + pPlayer.getMainHandItem()),
+                            Util.NIL_UUID);
+                    pPlayer.playSound(SoundEvents.GLASS_BREAK,1,1);
+
+                    //damageItem(mainHandItem, 100, pPlayer);
+                }
+            }
+        }
+        if (!pLevel.isClientSide && pPlayer.isSteppingCarefully()) {
+
+        }
+        pPlayer.swing(InteractionHand.OFF_HAND);
+            return InteractionResultHolder.pass(pPlayer.getItemInHand(pUsedHand));
+        }
+
+
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
