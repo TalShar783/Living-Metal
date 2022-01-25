@@ -2,6 +2,7 @@ package com.talshar.livingmetal.item;
 
 import com.talshar.livingmetal.LivingMetal;
 import com.talshar.livingmetal.item.custom.DustbringerItem;
+import com.talshar.livingmetal.item.custom.LMPickaxeItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -32,7 +33,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_PICKAXE = ITEMS.register("viridium_pickaxe",
-            () -> new PickaxeItem(ModTiers.VIRIDIUM, 2,-2.8f,
+            () -> new LMPickaxeItem(ModTiers.VIRIDIUM, 2,-2.8f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_SHOVEL = ITEMS.register("viridium_shovel",
