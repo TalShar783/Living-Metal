@@ -40,7 +40,6 @@ public class DustbringerItem extends Item {
             if (pUsedHand == InteractionHand.OFF_HAND) {
                 ItemStack mainHandItem = pPlayer.getMainHandItem();
                 if (isDamageable(mainHandItem)) {
-                    setDamage(mainHandItem, (getDamage(mainHandItem) + 50));
                     int currentDamage = getDamage(mainHandItem);
                     pPlayer.sendMessage(new TextComponent("Current damage: " + currentDamage),
                             Util.NIL_UUID);
@@ -48,9 +47,9 @@ public class DustbringerItem extends Item {
                             Util.NIL_UUID);
                     pPlayer.sendMessage(new TextComponent("Item in main hand is: " + pPlayer.getMainHandItem()),
                             Util.NIL_UUID);
+                    setDamage(mainHandItem, (getDamage(mainHandItem) + 50));
                     pPlayer.playSound(SoundEvents.GLASS_BREAK,10,1);
 
-                    //damageItem(mainHandItem, 100, pPlayer);
                 }
             }
         }

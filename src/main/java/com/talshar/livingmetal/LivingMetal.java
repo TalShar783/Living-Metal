@@ -2,6 +2,7 @@ package com.talshar.livingmetal;
 
 import com.talshar.livingmetal.block.ModBlocks;
 import com.talshar.livingmetal.item.ModItems;
+import com.talshar.livingmetal.uniqueBehavior.LMItemBreaking;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -47,6 +48,7 @@ public class LivingMetal
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        MinecraftForge.EVENT_BUS.register(new LMItemBreaking());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -67,6 +69,12 @@ public class LivingMetal
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    @SubscribeEvent
+    public void onCommonSetup(FMLCommonSetupEvent event) {
+        MinecraftForge.EVENT_BUS.register(new LMItemBreaking());
+        LOGGER.info("Hello from our Living Metal Behavior Scripts!");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

@@ -1,8 +1,7 @@
 package com.talshar.livingmetal.item;
 
 import com.talshar.livingmetal.LivingMetal;
-import com.talshar.livingmetal.item.custom.DustbringerItem;
-import com.talshar.livingmetal.item.custom.LMPickaxeItem;
+import com.talshar.livingmetal.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -14,6 +13,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, LivingMetal.MOD_ID);
 
     public static final RegistryObject<Item> VIRIDIUM_INGOT = ITEMS.register("viridium_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
+    public static final RegistryObject<Item> VIRIDIUM_NUGGET = ITEMS.register("viridium_nugget",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
+    public static final RegistryObject<Item> RAW_VIRIDIUM = ITEMS.register("raw_viridium",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_CHESTPLATE = ITEMS.register("viridium_chestplate",
@@ -29,7 +34,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_HOE = ITEMS.register("viridium_hoe",
-            () -> new HoeItem(ModTiers.VIRIDIUM, 0,-2f,
+            () -> new LMHoeItem(ModTiers.VIRIDIUM, 0,-2f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_PICKAXE = ITEMS.register("viridium_pickaxe",
@@ -37,22 +42,16 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_SHOVEL = ITEMS.register("viridium_shovel",
-            () -> new ShovelItem(ModTiers.VIRIDIUM, 2.5f,-3f,
+            () -> new LMShovelItem(ModTiers.VIRIDIUM, 2.5f,-3f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_SWORD = ITEMS.register("viridium_sword",
-            () -> new SwordItem(ModTiers.VIRIDIUM, 4, -2.4f,
+            () -> new LMSwordItem(ModTiers.VIRIDIUM, 4, -2.4f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VIRIDIUM_AXE = ITEMS.register("viridium_axe",
-            () -> new AxeItem(ModTiers.VIRIDIUM, 8,-3.1f,
+            () -> new LMAxeItem(ModTiers.VIRIDIUM, 8,-3.1f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
-
-    public static final RegistryObject<Item> VIRIDIUM_NUGGET = ITEMS.register("viridium_nugget",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
-
-    public static final RegistryObject<Item> RAW_VIRIDIUM = ITEMS.register("raw_viridium",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> DUSTBRINGER = ITEMS.register("dustbringer",
             () -> new DustbringerItem(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB).durability(1000)));
