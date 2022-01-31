@@ -15,6 +15,7 @@
   "block.livingmetal.viridium_block": "Viridium Block",
   "block.livingmetal.viridium_ore": "Viridium Ore",
   "itemGroup.livingMetalTab": "Living Metal",
-  "block.livingmetal.dust": "Dust"
+  "block.livingmetal.dust": "Dust",
+  "block.livingmetal.ore_tap": "Ore Tap"
 
 }
