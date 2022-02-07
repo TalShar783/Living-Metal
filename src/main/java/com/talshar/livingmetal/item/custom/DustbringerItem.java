@@ -61,7 +61,6 @@ public class DustbringerItem extends Item {
         }
 
 
-
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         if(!pContext.getLevel().isClientSide()) {
