@@ -22,10 +22,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS=
     DeferredRegister.create(ForgeRegistries.BLOCKS, LivingMetal.MOD_ID);
 
-    public static final RegistryObject<Block> VIRIDIUM_BLOCK = registerBlock("viridium_block",
+    public static final RegistryObject<Block> VERIDIUM_BLOCK = registerBlock("veridium_block",
     () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(1.75f,6).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> VIRIDIUM_ORE = registerBlock("viridium_ore",
+    public static final RegistryObject<Block> VERIDIUM_ORE = registerBlock("veridium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.75f,6).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DUST = registerBlock("dust",

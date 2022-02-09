@@ -26,7 +26,7 @@ public class ModTags {
 
     public static class Items {
 
-        public static final Tags.IOptionalNamedTag<Item> VIRIDIUM_INGOTS = createForgeTag("ingots/viridium");
+        public static final Tags.IOptionalNamedTag<Item> VERIDIUM_INGOTS = createForgeTag("ingots/veridium");
 
         private static Tags.IOptionalNamedTag<Item> createTag(String name) {
             return ItemTags.createOptional(new ResourceLocation(LivingMetal.MOD_ID, name));

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "livingmetal:viridium_ore",
-    "livingmetal:viridium_block"
+    "livingmetal:veridium_ore",
+    "livingmetal:veridium_block"
   ]
 }

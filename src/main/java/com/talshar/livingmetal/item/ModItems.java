@@ -12,45 +12,45 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, LivingMetal.MOD_ID);
 
-    public static final RegistryObject<Item> VIRIDIUM_INGOT = ITEMS.register("viridium_ingot",
+    public static final RegistryObject<Item> VERIDIUM_INGOT = ITEMS.register("veridium_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_NUGGET = ITEMS.register("viridium_nugget",
+    public static final RegistryObject<Item> VERIDIUM_NUGGET = ITEMS.register("veridium_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> RAW_VIRIDIUM = ITEMS.register("raw_viridium",
+    public static final RegistryObject<Item> RAW_VERIDIUM = ITEMS.register("raw_veridium",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_CHESTPLATE = ITEMS.register("viridium_chestplate",
+    public static final RegistryObject<Item> VERIDIUM_CHESTPLATE = ITEMS.register("veridium_chestplate",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_HELMET = ITEMS.register("viridium_helmet",
+    public static final RegistryObject<Item> VERIDIUM_HELMET = ITEMS.register("veridium_helmet",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_LEGGINGS = ITEMS.register("viridium_leggings",
+    public static final RegistryObject<Item> VERIDIUM_LEGGINGS = ITEMS.register("veridium_leggings",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_BOOTS = ITEMS.register("viridium_boots",
+    public static final RegistryObject<Item> VERIDIUM_BOOTS = ITEMS.register("veridium_boots",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_HOE = ITEMS.register("viridium_hoe",
-            () -> new LMHoeItem(ModTiers.VIRIDIUM, 0,-2f,
+    public static final RegistryObject<Item> VERIDIUM_HOE = ITEMS.register("veridium_hoe",
+            () -> new LMHoeItem(ModTiers.VERIDIUM, 0,-2f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_PICKAXE = ITEMS.register("viridium_pickaxe",
-            () -> new LMPickaxeItem(ModTiers.VIRIDIUM, 2,-2.8f,
+    public static final RegistryObject<Item> VERIDIUM_PICKAXE = ITEMS.register("veridium_pickaxe",
+            () -> new LMPickaxeItem(ModTiers.VERIDIUM, 2,-2.8f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_SHOVEL = ITEMS.register("viridium_shovel",
-            () -> new LMShovelItem(ModTiers.VIRIDIUM, 2.5f,-3f,
+    public static final RegistryObject<Item> VERIDIUM_SHOVEL = ITEMS.register("veridium_shovel",
+            () -> new LMShovelItem(ModTiers.VERIDIUM, 2.5f,-3f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_SWORD = ITEMS.register("viridium_sword",
-            () -> new LMSwordItem(ModTiers.VIRIDIUM, 4, -2.4f,
+    public static final RegistryObject<Item> VERIDIUM_SWORD = ITEMS.register("veridium_sword",
+            () -> new LMSwordItem(ModTiers.VERIDIUM, 4, -2.4f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
-    public static final RegistryObject<Item> VIRIDIUM_AXE = ITEMS.register("viridium_axe",
-            () -> new LMAxeItem(ModTiers.VIRIDIUM, 8,-3.1f,
+    public static final RegistryObject<Item> VERIDIUM_AXE = ITEMS.register("veridium_axe",
+            () -> new LMAxeItem(ModTiers.VERIDIUM, 8,-3.1f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> DUSTBRINGER = ITEMS.register("dustbringer",

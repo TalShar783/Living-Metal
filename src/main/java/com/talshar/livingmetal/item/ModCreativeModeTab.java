@@ -7,7 +7,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab LIVINGMETAL_TAB = new CreativeModeTab("livingMetalTab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.VIRIDIUM_AXE.get());
+            return new ItemStack(ModItems.VERIDIUM_AXE.get());
         }
     };
 }
