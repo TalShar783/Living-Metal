@@ -26,7 +26,7 @@ import java.util.Map;
 public class DustbringerItem extends Item {
     private static final Map<Block, Item> DUSTBRINGER_ITEM_CRAFT =
             new ImmutableMap.Builder<Block, Item>()
-                    .put(ModBlocks.VIRIDIUM_BLOCK.get(), ModItems.VIRIDIUM_NUGGET.get())
+                    .put(ModBlocks.VERIDIUM_BLOCK.get(), ModItems.VERIDIUM_NUGGET.get())
                     .put(Blocks.SAND, Blocks.SAND.asItem())
                     .build();
 
@@ -59,7 +59,6 @@ public class DustbringerItem extends Item {
         pPlayer.swing(InteractionHand.OFF_HAND);
             return InteractionResultHolder.pass(pPlayer.getItemInHand(pUsedHand));
         }
-
 
 
     @Override

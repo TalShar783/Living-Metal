@@ -5,7 +5,7 @@ import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.Tags;
 
 public class ModTiers {
-    public static final ForgeTier VIRIDIUM = new ForgeTier(1, 200, 4f,
+    public static final ForgeTier VERIDIUM = new ForgeTier(1, 200, 4f,
             0f, 10, Tags.Blocks.NEEDS_GOLD_TOOL,
-            () -> Ingredient.of(ModItems.VIRIDIUM_INGOT.get()));
+            () -> Ingredient.of(ModItems.VERIDIUM_INGOT.get()));
 }

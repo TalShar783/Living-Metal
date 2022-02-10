@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "livingmetal:veridium_ingot"
+    }
+  },
+  "result": {
+    "item": "livingmetal:veridium_hoe"
+  }
+}
