@@ -5,6 +5,10 @@
   },
   "display": {
     "firstperson_lefthand": {
-      "rotation": [0, 90, 0]}
+      "rotation": [0, 90, 0]},
+    "thirdperson_lefthand": {
+      "rotation": [0, 90, 0]},
+    "thirdperson_righthand": {
+      "rotation": [0, -90, 0]}
     }
   }
