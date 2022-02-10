@@ -2,6 +2,7 @@ package com.talshar.livingmetal.item;
 
 import com.talshar.livingmetal.LivingMetal;
 import com.talshar.livingmetal.item.custom.*;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,18 +20,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> RAW_VERIDIUM = ITEMS.register("raw_veridium",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
-
-    public static final RegistryObject<Item> VERIDIUM_CHESTPLATE = ITEMS.register("veridium_chestplate",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
-
-    public static final RegistryObject<Item> VERIDIUM_HELMET = ITEMS.register("veridium_helmet",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
-
-    public static final RegistryObject<Item> VERIDIUM_LEGGINGS = ITEMS.register("veridium_leggings",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
-
-    public static final RegistryObject<Item> VERIDIUM_BOOTS = ITEMS.register("veridium_boots",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VERIDIUM_HOE = ITEMS.register("veridium_hoe",
@@ -53,9 +42,24 @@ public class ModItems {
             () -> new LMAxeItem(ModTiers.VERIDIUM, 8,-3.1f,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
+    public static final RegistryObject<Item> VERIDIUM_CHESTPLATE = ITEMS.register("veridium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
+    public static final RegistryObject<Item> VERIDIUM_HELMET = ITEMS.register("veridium_helmet",
+            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
+    public static final RegistryObject<Item> VERIDIUM_LEGGINGS = ITEMS.register("veridium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
+    public static final RegistryObject<Item> VERIDIUM_BOOTS = ITEMS.register("veridium_boots",
+            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
+
     public static final RegistryObject<Item> DUSTBRINGER = ITEMS.register("dustbringer",
             () -> new DustbringerItem(new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB).durability(1000)));
-
 
 
 
