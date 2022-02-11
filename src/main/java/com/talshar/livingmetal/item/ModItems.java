@@ -43,19 +43,19 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VERIDIUM_CHESTPLATE = ITEMS.register("veridium_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.CHEST,
+            () -> new LivingArmor(ModArmorMaterials.VERIDIUM, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VERIDIUM_HELMET = ITEMS.register("veridium_helmet",
-            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.HEAD,
+            () -> new LivingArmor(ModArmorMaterials.VERIDIUM, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VERIDIUM_LEGGINGS = ITEMS.register("veridium_leggings",
-            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.LEGS,
+            () -> new LivingArmor(ModArmorMaterials.VERIDIUM, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> VERIDIUM_BOOTS = ITEMS.register("veridium_boots",
-            () -> new ArmorItem(ModArmorMaterials.VERIDIUM, EquipmentSlot.FEET,
+            () -> new LivingArmor(ModArmorMaterials.VERIDIUM, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.LIVINGMETAL_TAB)));
 
     public static final RegistryObject<Item> DUSTBRINGER = ITEMS.register("dustbringer",

@@ -18,7 +18,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.UUID;
 
 
-public class LMItemBreaking {
+public class LMToolBreaking {
 
         @SubscribeEvent(priority = EventPriority.HIGH)
         public void onBreakingBlock(PlayerEvent.BreakSpeed event) {
@@ -159,7 +159,7 @@ public class LMItemBreaking {
 
             if (stack.isDamageableItem()) {
                 var item = stack.getItem();
-                if (isLMTool(item)) {
+                if (isLMTool(item) || item instanceof LivingArmor) {
                     if (isBroken(stack)) {
                         tooltip.next();
                         tooltip.add(new TranslatableComponent("Broken").withStyle(ChatFormatting.RED));
