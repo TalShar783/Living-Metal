@@ -18,7 +18,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.UUID;
 
 
-public class LMToolBreaking {
+public class LMItemBreaking {
 
         @SubscribeEvent(priority = EventPriority.HIGH)
         public void onBreakingBlock(PlayerEvent.BreakSpeed event) {
