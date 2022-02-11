@@ -47,9 +47,10 @@ public class DustbringerItem extends Item {
                             Util.NIL_UUID);
                     pPlayer.sendMessage(new TextComponent("Item in main hand is: " + pPlayer.getMainHandItem()),
                             Util.NIL_UUID);
-                    setDamage(mainHandItem, (getDamage(mainHandItem) + 50));
-                    pPlayer.playSound(SoundEvents.GLASS_BREAK,10,1);
-
+                    var nearBreakage = pPlayer.getMainHandItem().getMaxDamage() - 3;
+                    pPlayer.getMainHandItem().setDamageValue(nearBreakage);
+//                    mainHandItem.setDamageValue(nearBreakage);
+//                    pPlayer.playSound(SoundEvents.GLASS_BREAK,10,5);
                 }
             }
         }
